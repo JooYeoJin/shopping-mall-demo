@@ -1,0 +1,46 @@
+/* WITHBLOOMING 공통 브랜드·네비 토큰 (메인·관리자·인증 페이지) */
+
+.site-brand {
+  margin: 0;
+  font-family: 'Playfair Display', 'Times New Roman', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #111;
+  text-decoration: none;
+}
+
+.site-brand--lg {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+  line-height: 1;
+}
+
+.site-brand--sm {
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+}
+
+.site-nav-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #111;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.95;
+}
+
+.site-nav-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.site-nav-link--active {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}

@@ -1,0 +1,135 @@
+.login-page {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.login-page__tabs {
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+}
+
+.login-page__tab {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #aaa;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-page__tab--active {
+  color: #111;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.login-page__tab:not(.login-page__tab--active):hover {
+  color: #555;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.login-field__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-field__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-field__link {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.65rem;
+  color: #888;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.login-field__link:hover {
+  color: #444;
+}
+
+.login-field__control {
+  border-bottom: 3px solid #111;
+}
+
+.login-field__control input {
+  width: 100%;
+  padding: 0.4rem 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+}
+
+.login-form__submit {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.95rem 1rem;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.login-form__submit:hover:not(:disabled) {
+  background: #333;
+}
+
+.login-form__submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.login-form__secondary {
+  display: block;
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid #111;
+  background: #fff;
+  color: #111;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-form__secondary:hover {
+  background: #fafafa;
+}
+
+.login-form__message {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.login-form__message--error {
+  color: #b91c1c;
+}
+
+.login-form__message--success {
+  color: #15803d;
+}

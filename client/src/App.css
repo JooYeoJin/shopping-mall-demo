@@ -1,0 +1,63 @@
+.home-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.home-page__brand {
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.28em;
+  font-weight: 400;
+}
+
+.home-page__lead {
+  margin: 1rem 0 2.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.home-page__flash,
+.home-page__session {
+  margin: -1.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.home-page__flash {
+  color: #15803d;
+}
+
+.home-page__session {
+  color: #333;
+}
+
+.home-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.home-page__button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #222;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.home-page__button:hover {
+  background: #fafafa;
+}
+
+.home-page__button--primary {
+  background: #111;
+  color: #fff;
+}
+
+.home-page__button--primary:hover {
+  background: #333;
+}
