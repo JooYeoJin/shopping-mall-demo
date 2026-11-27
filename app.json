@@ -1,21 +1,45 @@
 {
-    "name": "shopping-mall-demo",
-    "description": "A shopping mall demo application",
-    "repository": "https://github.com/JooYeoJin/shopping-mall-demo",
-    "keywords": [
-        "node", 
-        "express", 
-        "mongodb"
-    ],    
-    "buildpacks": [
-        {
-            "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
-        },
-        {
-            "url": "heroku/nodejs"
-        }
-    ],
-    "env": {
-        "PROJECT_PATH": "server"
+  "name": "shopping-mall-demo",
+  "description": "Shopping mall demo API (Express + MongoDB)",
+  "repository": "https://github.com/JooYeoJin/shopping-mall-demo",
+  "keywords": ["node", "express", "mongodb"],
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
+    },
+    {
+      "url": "heroku/nodejs"
     }
+  ],
+  "env": {
+    "PROJECT_PATH": {
+      "description": "Monorepo subdirectory to deploy. Keep as server.",
+      "value": "server"
+    },
+    "JWT_SECRET": {
+      "description": "Secret used to sign access tokens",
+      "generator": "secret"
+    },
+    "JWT_EXPIRES_IN": {
+      "description": "Access token lifetime",
+      "value": "7d",
+      "required": false
+    },
+    "MONGODB_ATLAS_URI": {
+      "description": "MongoDB Atlas connection string"
+    },
+    "CORS_ORIGIN": {
+      "description": "Vercel frontend origin(s), comma-separated. Example: https://your-app.vercel.app",
+      "required": false
+    },
+    "PORTONE_API_KEY": {
+      "description": "PortOne REST API key (payment verification)",
+      "required": false
+    },
+    "PORTONE_API_SECRET": {
+      "description": "PortOne REST API secret (payment verification)",
+      "required": false
+    }
+  }
 }

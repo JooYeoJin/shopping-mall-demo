@@ -10,9 +10,18 @@ import wishlistRoutes from './routes/wishlist.routes.js';
 import orderRoutes from './routes/order.routes.js';
 import paymentRoutes from './routes/payment.routes.js';
 
+function corsOrigin() {
+  const raw = process.env.CORS_ORIGIN?.trim();
+  if (!raw) return true;
+  const list = raw.split(',').map((s) => s.trim()).filter(Boolean);
+  if (list.length === 0) return true;
+  if (list.length === 1) return list[0];
+  return list;
+}
+
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: corsOrigin() }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
