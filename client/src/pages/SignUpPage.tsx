@@ -114,7 +114,11 @@ export default function SignUpPage() {
 
   return (
     <div className="signup-page">
-      <h1 className="signup-page__brand">WITHBLOOMING</h1>
+      <h1 className="signup-page__brand">
+        <Link className="signup-page__brand-link" to="/">
+          WITHBLOOMING
+        </Link>
+      </h1>
 
       <form className="signup-form" onSubmit={handleSubmit} noValidate>
         <h2 className="signup-form__section-title">회원 정보</h2>

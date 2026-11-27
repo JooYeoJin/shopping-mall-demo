@@ -1,4 +1,4 @@
-import { apiGet, apiPost } from '@/lib/api'
+import { apiGet, apiPatch, apiPost } from '@/lib/api'
 import type { AdminDashboardStats } from '@/types/admin'
 import type { UserRecord } from '@/types/user'
 
@@ -26,4 +26,15 @@ export async function resetUserPassword(
     `/api/users/${userId}/reset-password`,
     {}
   )
+}
+
+export async function setUserType(
+  userId: string,
+  user_type: UserRecord['user_type']
+): Promise<UserRecord> {
+  const { user } = await apiPatch<{ user: UserRecord }>(
+    `/api/users/${userId}`,
+    { user_type }
+  )
+  return user
 }

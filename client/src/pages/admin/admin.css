@@ -627,6 +627,11 @@
   margin-top: 1.25rem;
 }
 
+.admin-modal__actions .admin-btn--primary {
+  text-transform: none;
+  letter-spacing: 0.04em;
+}
+
 .admin-btn--danger {
   border-color: #b91c1c;
   color: #b91c1c;

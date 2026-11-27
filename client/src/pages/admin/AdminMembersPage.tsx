@@ -105,6 +105,12 @@ export default function AdminMembersPage() {
         <AdminMemberDetailModal
           user={selectedUser}
           onClose={() => setSelectedUser(null)}
+          onUpdated={(updated) => {
+            setSelectedUser(updated)
+            setUsers((prev) =>
+              prev.map((u) => (u._id === updated._id ? updated : u))
+            )
+          }}
         />
       ) : null}
     </>
