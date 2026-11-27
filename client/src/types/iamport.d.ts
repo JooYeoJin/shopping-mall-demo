@@ -7,8 +7,10 @@ interface IamportInstance {
   ) => void
 }
 
-interface Window {
-  IMP?: IamportInstance
+declare global {
+  interface Window {
+    IMP?: IamportInstance
+  }
 }
 
 export {}
