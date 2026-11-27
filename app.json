@@ -1,0 +1,21 @@
+{
+    "name": "shopping-mall-demo",
+    "description": "A shopping mall demo application",
+    "repository": "https://github.com/JooYeoJin/shopping-mall-demo",
+    "keywords": [
+        "node", 
+        "express", 
+        "mongodb"
+    ],    
+    "buildpacks": [
+        {
+            "url": "https://github.com/timanovsky/subdir-heroku-buildpack"
+        },
+        {
+            "url": "heroku/nodejs"
+        }
+    ],
+    "env": {
+        "PROJECT_PATH": "server"
+    }
+}
